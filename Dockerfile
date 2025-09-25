@@ -31,10 +31,7 @@ RUN apt-get update && apt-get install -y \
  && dpkg -i bvbrc-cli-1.040.deb || apt-get -f install -y \
  && rm bvbrc-cli-1.040.deb \
  && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
-
-# Clone the Pangenome-Analysis-Workflow repository
-RUN git clone https://github.com/melissaelfeghali/Pangenome-Analysis-Workflow.git /opt/Pangenome-Analysis-Workflow
+ && rm -rf /var/lib/apt/lists/* 
 
 WORKDIR /work
 ENV PATH="/opt/conda/bin:$PATH"
