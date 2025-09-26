@@ -9,7 +9,13 @@ RUN micromamba install -y -n base -c conda-forge -c bioconda \
     diamond=2.1.9 \
     hmmer=3.4 \
     mmseqs2=15.6f452 \
+    pandas \
+    numpy \
+    scipy \
+    matplotlib \
+    biopython \
  && micromamba clean -a -y
+
 
 ENV EGGNOG_DATA_DIR=/data/eggnog
 
@@ -32,12 +38,22 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /work
+WORKDIR /work/Pangenomics-Pipeline
+
 ENV PATH="/opt/conda/bin:$PATH"
 
 USER root 
 RUN mkdir -p ${EGGNOG_DATA_DIR} /work
+
+COPY work/Pangenomics-Pipeline /work/Pangenomics-Pipeline
+
+
+RUN chmod +x /work/Pangenomics-Pipeline/codes/workflow1.sh
+RUN chmod -R +x /work/Pangenomics-Pipeline/codes
+
+
 COPY start.sh /usr/local/bin/start.sh
+
 RUN chmod +x /usr/local/bin/start.sh
 
 
