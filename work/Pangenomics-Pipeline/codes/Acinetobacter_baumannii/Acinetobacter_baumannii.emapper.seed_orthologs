@@ -1,8 +1,8 @@
-## Tue Sep 30 09:41:33 2025
+## Wed Oct  1 12:52:16 2025
 ## emapper-2.1.12
 ## /opt/conda/bin/emapper.py -i Acinetobacter_baumannii/Acinetobacter_baumannii_proteins.faa -o Acinetobacter_baumannii/Acinetobacter_baumannii --usemem --cpu 8 --outfmt_short
 ##
-##/opt/conda/bin/diamond blastp -d '/data/eggnog/eggnog_proteins.dmnd' -q '/work/Pangenomics-Pipeline/codes/Acinetobacter_baumannii/Acinetobacter_baumannii_proteins.faa' --threads 8 -o '/work/Pangenomics-Pipeline/codes/Acinetobacter_baumannii/Acinetobacter_baumannii.emapper.hits' --tmpdir '/work/Pangenomics-Pipeline/codes/emappertmp_dmdn_xnvn8v6_' --sensitive --iterate -e 0.001 --top 3  --outfmt 6 qseqid sseqid evalue bitscore
+##/opt/conda/bin/diamond blastp -d '/data/eggnog/eggnog_proteins.dmnd' -q '/work/Pangenomics-Pipeline/codes/Acinetobacter_baumannii/Acinetobacter_baumannii_proteins.faa' --threads 8 -o '/work/Pangenomics-Pipeline/codes/Acinetobacter_baumannii/Acinetobacter_baumannii.emapper.hits' --tmpdir '/work/Pangenomics-Pipeline/codes/emappertmp_dmdn_ou71pxh_' --sensitive --iterate -e 0.001 --top 3  --outfmt 6 qseqid sseqid evalue bitscore
 #qseqid	sseqid	evalue	bitscore
 lcl|CP074585.1_cds_UFH72313.1_1	470.IX87_13935	9.29e-147	414.0
 lcl|CP074585.1_cds_UFH72314.1_2	520709.F985_00107	2.8e-168	470.0
@@ -3643,5 +3643,5 @@ lcl|CP074586.1_cds_UFH74234.1_3723	575564.HMPREF0014_04660	2.3e-80	238.0
 lcl|CP074586.1_cds_KIH05_19100_3724	981327.F925_03105	4.97e-24	94.7
 lcl|CP074586.1_cds_UFH74235.1_3725	575564.HMPREF0014_04654	3.06e-193	539.0
 ## 3638 queries scanned
-## Total time (seconds): 10.32064962387085
-## Rate: 352.50 q/s
+## Total time (seconds): 4.402933120727539
+## Rate: 826.27 q/s

@@ -21,7 +21,7 @@ species = sys.argv[4]
 numb_genes = int(sys.argv[5])
 
 df = pd.read_csv(fname)
-df = df.drop(0)
+#df = df.drop(0)
 
 # First value is number of unique COG X genes, second is number of non-unique COG X genes
 COG_counts = {

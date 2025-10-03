@@ -18,21 +18,32 @@ with open(fname, 'r') as file:
 with open(fname, 'w') as file:
     file.writelines(lines)
 
-# Open the CSV file
+# Open the CSV file with tab delimiter
 with open(fname, 'r') as file:
-	# Create a CSV reader
-	csv_reader = csv.reader(file)
+    # Create a CSV reader with tab delimiter
+    csv_reader = csv.reader(file, delimiter='\t')
+    
+    # Iterate over each row, in our case over each feature
+    for row in csv_reader:
+        # Skip header rows (lines starting with #) or empty rows
+        if len(row) == 0 or (len(row) > 0 and row[0].startswith('#')):
+            continue
+            
+        # Check if row has at least 3 columns
+        if len(row) < 3:
+            print(f"Warning: Skipping malformed row with {len(row)} columns: {row}")
+            continue
+            
+        query = row[0]
+        cog = row[1]
+        
+        # Handle GO terms - everything from column 2 onwards
+        go_array = row[2:]
+        go = ','.join(go_array)
+        
+        divide = [query, cog, go]
+        divide = pd.DataFrame([divide], columns=column_names)
+        df = pd.concat([df, divide], ignore_index=True)
 
-	# Iterate over each row, in our case over each feature
-	for row in csv_reader:
-		query = row[0].split("\t")[0]
-		cog = row[0].split("\t")[1]
-
-		go_array = row[1:]
-		go_array.insert(0, row[0].split("\t")[2])
-		go = ','.join(go_array)
-		
-		divide = [query, cog, go]
-		divide = pd.DataFrame([divide], columns=column_names)
-		df = df.append(divide, ignore_index=True)
 df.to_csv(fname, index=False)
+print(f"Processed {len(df)} rows successfully")

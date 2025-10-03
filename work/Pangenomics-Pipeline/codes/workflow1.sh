@@ -121,7 +121,7 @@ for file in "$directory"/*.csv; do
 	echo
 	
 	# Extract only COG Category and GO terms and adjust file format 
-	tail -n +5 $species_name/$species_name.emapper.annotations | cut -f 1 -f 7 -f 10 > $species_name/${species_name}_COG_GO.csv
+	tail -n +5 $species_name/$species_name.emapper.annotations | cut -f 1,7,10 > $species_name/${species_name}_COG_GO.csv
 	python3 adjust_eggNOG_output.py $species_name/${species_name}_COG_GO.csv
 
 	echo "================================================="

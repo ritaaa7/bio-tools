@@ -1,4 +1,4 @@
-## Tue Sep 30 09:41:33 2025
+## Wed Oct  1 12:52:16 2025
 ## emapper-2.1.12
 ## /opt/conda/bin/emapper.py -i Acinetobacter_baumannii/Acinetobacter_baumannii_proteins.faa -o Acinetobacter_baumannii/Acinetobacter_baumannii --usemem --cpu 8 --outfmt_short
 ##
@@ -3642,5 +3642,5 @@ lcl|CP074586.1_cds_UFH74234.1_3723	575564.HMPREF0014_04660	2.3e-80	238.0	COG4683
 lcl|CP074586.1_cds_KIH05_19100_3724	981327.F925_03105	4.97e-24	94.7	2AEWM@1|root,314U9@2|Bacteria,1QIYT@1224|Proteobacteria,1TGVG@1236|Gammaproteobacteria,3NM65@468|Moraxellaceae	1236|Gammaproteobacteria	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
 lcl|CP074586.1_cds_UFH74235.1_3725	575564.HMPREF0014_04654	3.06e-193	539.0	COG5527@1|root,COG5527@2|Bacteria,1RD9C@1224|Proteobacteria,1S4ZG@1236|Gammaproteobacteria,3NJHN@468|Moraxellaceae	1236|Gammaproteobacteria	L	Initiator Replication protein	-	-	-	-	-	-	-	-	-	-	-	-	Rep_3
 ## 3638 queries scanned
-## Total time (seconds): 10.391331672668457
-## Rate: 350.10 q/s
+## Total time (seconds): 4.452299356460571
+## Rate: 817.11 q/s

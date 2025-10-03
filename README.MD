@@ -22,3 +22,6 @@ need to manually add the eggnog databases because they're too large to add in th
 
 to run the workflow1.sh go into codes directory + we need to provide the path of genome_ids_fasta starting from /work/Pangenomics-Pipeline/genome_ids_fasta
 
+we changed the adjust eggnohg output code, the old code is still avaliable on github.
+
+We also changed the cut command in workflow1.sh and commented out the df = df.drop[0] in all fisher test.py files
